@@ -58,7 +58,7 @@ public class EMAIL extends HttpServlet{
                 MimeMessage message = new MimeMessage(session);
                 // 设置发件人邮箱地址
 
-               message.setFrom(new InternetAddress("2060911074@qq.com"));
+               message.setFrom(new InternetAddress("123456789@qq.com"));
                 // 设置收件人邮箱地址
                 message.setRecipient(Message.RecipientType.TO, new InternetAddress(p3));
                 // 设置邮件标题
@@ -68,7 +68,7 @@ public class EMAIL extends HttpServlet{
                 // 得到邮差对象
                 Transport transport = session.getTransport();
                 // 连接自己的邮箱账户
-                transport.connect("2060911074@qq.com", "gzuqjyyxbmxvjefj");// 密码为QQ邮箱开通的stmp服务后得到的客户端授权码
+                transport.connect("12345678@qq.com", "123456789");// 密码为QQ邮箱开通的stmp服务后得到的客户端授权码
                 // 发送邮件
                 transport.sendMessage(message, message.getAllRecipients());
                 transport.close();
